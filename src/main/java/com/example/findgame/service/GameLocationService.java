@@ -45,10 +45,14 @@ public class GameLocationService {
 
     public GameLocation addGameLocation(GameLocationDto gameLocationDto) {
         GameLocation gameLocation = new GameLocation();
+        gameLocation.setName(gameLocationDto.getName());
+        gameLocation.setDescription(gameLocationDto.getDescription());
+        gameLocation.setWebsiteUrl(gameLocationDto.getWebsiteUrl());
+        gameLocation.setImageUrl(gameLocationDto.getImageUrl());
+        gameLocation.setPromoInfo(gameLocationDto.getPromoInfo());
         gameLocation.setLatitude(gameLocationDto.getLatitude());
         gameLocation.setLongitude(gameLocationDto.getLongitude());
         gameLocation.setVisibilityRadius(gameLocationDto.getVisibilityRadius());
-        gameLocation.setHtmlContent(gameLocationDto.getHtmlContent());
 
         // Fetch the editor/user from the UserService based on their ID
         User editor = userService.getUserById(gameLocationDto.getEditorId()).toEntity();

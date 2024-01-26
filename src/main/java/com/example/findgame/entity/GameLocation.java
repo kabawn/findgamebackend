@@ -10,18 +10,27 @@ public class GameLocation {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+@Column(name = "name",nullable = false)
+private String name;
+
+@Column(name = "description" , nullable = false)
+private String description;
+
+@Column (name = "website_url", nullable = false)
+private String websiteUrl;
+
+@Column(name = "image_url" , nullable = false)
+private String imageUrl;
 
 
+
+    @Column(name = "promo_info", nullable = false)
+private String promoInfo;
     @Column(name = "latitude", nullable = false)
     private Double latitude;
 
     @Column(name = "longitude", nullable = false)
     private Double longitude;
-
-    @Column(name = "html_content", nullable = false)
-    private String htmlContent;
-
-
 
     @Column(name = "visibility_radius", nullable = false)
     private Double visibilityRadius;
@@ -39,7 +48,45 @@ public class GameLocation {
     public void setId(Long id) {
         this.id = id;
     }
+    public String getName() {
+        return name;
+    }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getWebsiteUrl() {
+        return websiteUrl;
+    }
+
+    public void setWebsiteUrl(String websiteUrl) {
+        this.websiteUrl = websiteUrl;
+    }
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
+    }
+
+    public String getPromoInfo() {
+        return promoInfo;
+    }
+
+    public void setPromoInfo(String promoInfo) {
+        this.promoInfo = promoInfo;
+    }
     public Double getLatitude() {
         return latitude;
     }
@@ -55,15 +102,6 @@ public class GameLocation {
     public void setLongitude(Double longitude) {
         this.longitude = longitude;
     }
-
-    public String getHtmlContent() {
-        return htmlContent;
-    }
-
-    public void setHtmlContent(String htmlContent) {
-        this.htmlContent = htmlContent;
-    }
-
 
 
     public User getEditor() {

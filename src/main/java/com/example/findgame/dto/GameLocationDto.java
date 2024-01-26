@@ -6,9 +6,14 @@ public class GameLocationDto {
 
 
 
+    private String name;
+    private String description;
+    private String websiteUrl;
+    private String imageUrl;
+    private String promoInfo;
+
     private Double latitude;
     private Double longitude;
-    private String htmlContent;
 
 
 
@@ -24,7 +29,45 @@ public class GameLocationDto {
     public void setId(Long id) {
         this.id = id;
     }
+    public String getName() {
+        return name;
+    }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getWebsiteUrl() {
+        return websiteUrl;
+    }
+
+    public void setWebsiteUrl(String websiteUrl) {
+        this.websiteUrl = websiteUrl;
+    }
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
+    }
+
+    public String getPromoInfo() {
+        return promoInfo;
+    }
+
+    public void setPromoInfo(String promoInfo) {
+        this.promoInfo = promoInfo;
+    }
     public Double getLatitude() {
         return latitude;
     }
@@ -40,15 +83,6 @@ public class GameLocationDto {
     public void setLongitude(Double longitude) {
         this.longitude = longitude;
     }
-
-    public String getHtmlContent() {
-        return htmlContent;
-    }
-
-    public void setHtmlContent(String htmlContent) {
-        this.htmlContent = htmlContent;
-    }
-
 
 
     public Long getEditorId() {
