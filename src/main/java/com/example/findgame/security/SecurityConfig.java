@@ -49,6 +49,8 @@ public class SecurityConfig {
                 new AntPathRequestMatcher("/users/verify_success"), // new
                 new AntPathRequestMatcher("/users/verify_fail"),  // new
                 new AntPathRequestMatcher("/game-locations/**"),
+                new AntPathRequestMatcher("/images/**"),
+
 
 
 

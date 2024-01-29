@@ -12,6 +12,8 @@ public interface GameLocationMapper {
     GameLocationMapper INSTANCE = Mappers.getMapper(GameLocationMapper.class);
 
     @Mapping(source = "editor.id", target = "editorId")
+    @Mapping(source = "imageUrl", target = "imageUrl")
+
     GameLocationDto toDto(GameLocation gameLocation);
 
     GameLocation toEntity(GameLocationDto gameLocationDto);

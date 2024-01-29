@@ -9,12 +9,20 @@ public class GameLocationDto {
     private String name;
     private String description;
     private String websiteUrl;
-    private String imageUrl;
     private String promoInfo;
 
     private Double latitude;
     private Double longitude;
 
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
+    }
+
+    private String imageUrl;
 
 
     private Double visibilityRadius;
@@ -53,13 +61,7 @@ public class GameLocationDto {
         this.websiteUrl = websiteUrl;
     }
 
-    public String getImageUrl() {
-        return imageUrl;
-    }
 
-    public void setImageUrl(String imageUrl) {
-        this.imageUrl = imageUrl;
-    }
 
     public String getPromoInfo() {
         return promoInfo;
